@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Chips de categoría (Computación, Telefonía...): activo = negro con texto blanco -->
+    <style name="ChipCategoria" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_fondo</item>
+        <item name="android:textColor">@color/chip_texto</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="checkedIconVisible">false</item>
+    </style>
+
+    <!-- Chips pequeños de trabajos dentro de la tarjeta -->
+    <style name="ChipTrabajo" parent="Widget.Material3.Chip.Assist">
+        <item name="android:textAppearance">?attr/textAppearanceLabelSmall</item>
+        <item name="android:textColor">@color/negro</item>
+        <item name="chipBackgroundColor">@color/gris_fondo</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipMinHeight">24dp</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+    </style>
+</resources>

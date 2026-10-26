@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CardView (MaterialCardView) de cada técnico -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="6dp"
+    app:cardBackgroundColor="@color/blanco"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Foto del técnico -->
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_foto"
+            android:clipToOutline="true"
+            android:contentDescription="Foto del local"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_taller" />
+
+        <!-- Datos del técnico -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtEspecialidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Especialidad"
+                android:textColor="@color/gris_texto"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre/tecnico taller"
+                android:textColor="@color/negro"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Etiquetas de trabajos (se crean desde el código) -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipsTrabajos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:chipSpacingHorizontal="4dp"
+                app:chipSpacingVertical="2dp" />
+
+            <!-- RatingBar de solo lectura -->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="@color/estrella"
+                android:stepSize="0.1" />
+
+            <TextView
+                android:id="@+id/txtResenas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4,8 (500 reseñas)"
+                android:textColor="@color/gris_texto"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Corazón de favorito -->
+        <ImageView
+            android:id="@+id/imgCorazon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="Favorito"
+            android:src="@drawable/ic_favorito" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

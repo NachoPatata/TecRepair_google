@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Opciones del FloatingContextMenu (mantener presionada una tarjeta en Favoritos) -->
+    <item
+        android:id="@+id/opcion_detalles"
+        android:title="Ver detalles del local" />
+    <item
+        android:id="@+id/opcion_copiar"
+        android:title="Copiar número de teléfono" />
+    <item
+        android:id="@+id/opcion_quitar"
+        android:title="Quitar de favoritos" />
+</menu>
